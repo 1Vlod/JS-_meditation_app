@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.time-btns,
+.timer, 
+.sounds-btns{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.time-btn,
+.rain-btn,
+.beach-btn{
+    background: none;
+    outline: none;
+    width: 30%;
+    height: 10%;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.time-btn:hover{
+    background: white;
+    color: black;
+}
+.rain-btn,
+.beach-btn{
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 30px;
+}
+.rain-btn{
+    background: #4972a1;
+}
+.beach-btn{
+    background: #a14f49;
+}
+.rain-btn img,
+.beach-btn img{
+    height: 100%;
+}
+.timer{
+    position: relative;
+}
+.timer svg{
+    position: absolute;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.time-display{
+    color: white;
+    bottom: 10%;
+    position: absolute;
+    font-size: 50px;
+}
+video{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -5;
+}
+.play_app{
+    cursor: pointer;
+}
